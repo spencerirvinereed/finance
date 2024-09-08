@@ -1,0 +1,209 @@
+# M1 & M2 Money Supply
+
+The M1 and M2 money supply measures are tools used by economists and central banks to gauge the amount of money circulating in an economy. They help in understanding liquidity and economic activity.
+  
+### M1 Money Supply
+  
+M1 is the most liquid measure of the money supply, including:
+  
+1. **Currency in Circulation**: This is the physical cash (coins and paper money) held by the public.
+2. **Demand Deposits**: Checking accounts and other deposits that can be readily accessed and used for transactions.
+3. **Other Checkable Deposits**: Includes certain types of accounts that allow for immediate access and transactions, like negotiable order of withdrawal (NOW) accounts.
+
+M1 represents the money that is readily available for spending and is considered the most liquid form of money.
+
+### M2 Money Supply
+
+M2 includes all of M1 plus additional forms of money that are less liquid but still can be converted into cash or checking deposits relatively easily. It encompasses:
+  
+1. **Savings Deposits**: Accounts where money earns interest but is less accessible than demand deposits.
+2. **Time Deposits**: Certificates of deposit (CDs) and other accounts with fixed terms where money is locked in for a period but can be converted to cash or checking with some notice or penalty.
+3. **Money Market Deposit Accounts (MMDAs)**: These are interest-bearing accounts offered by banks and credit unions that typically require a higher minimum balance.
+
+M2 provides a broader view of the money supply by including assets that are not as immediately accessible as those in M1 but can still be relatively easily turned into cash or checking deposits.
+
+### Key Differences
+
+- **Liquidity**: M1 is the narrowest and most liquid measure, while M2 includes everything in M1 plus less liquid assets.
+- **Scope**: M2 gives a broader picture of the money supply by including savings accounts, time deposits, and other near-money assets.
+
+By monitoring these measures, central banks and policymakers can gauge economic conditions, influence monetary policy, and address issues like inflation or deflation.
+
+```{r}
+#| include: false
+
+library(tidyverse)
+library(anytime)
+
+df <- read_csv("data/FRB_H6.csv", skip = 5)
+df
+
+df$time <- anydate(df$`Time Period`)
+
+df %>% 
+  ggplot(aes(time, M1_N.M)) +
+  geom_point()
+
+df %>% 
+  ggplot(aes(time, M1_N.M)) +
+  geom_line()
+
+df %>% 
+  ggplot(aes(time, M1_N.M)) +
+  geom_smooth()
+
+df %>% 
+  ggplot(aes(time, M2_N.M)) +
+  geom_point()
+
+df %>% 
+  ggplot(aes(time, M2_N.M)) +
+  geom_line()
+
+df %>% 
+  ggplot(aes(time, M2_N.M)) +
+  geom_smooth()
+
+df %>% 
+  gather(key, value, -c(1,31)) %>% 
+  ggplot(aes(time, value, color=key)) +
+  geom_point()
+
+df %>% 
+  gather(key, value, -c(1,31)) %>% 
+  ggplot(aes(time, value, color=key)) +
+  geom_line() +
+  theme(legend.position = 'none') +
+  facet_wrap(~key, scales = "free")
+
+df <- read_csv("data/FRB_H6.csv")
+df <- df[1:5,]
+df
+
+df1 <- as.data.frame(t(df))
+
+df1$Description <- row.names(df1)
+
+df1
+
+names(df1) <- df1[1,]
+
+df1
+
+row.names(df1) <- seq(1:nrow(df1))
+
+df1
+
+df1 <- df1[-1,]
+df1
+
+library(gt)
+
+names(df1)[5] <- "Series"
+names(df1)[6] <- "Description"
+```
+
+## H.6 Statistical Release
+
+Federal Reserve publishes a host of economic data.
+
+Among them is the `Money Stock Measures` designated as H.6.
+
+Data Download, [link](https://www.federalreserve.gov/datadownload/Download.aspx?rel=H6&series=798e2796917702a5f8423426ba7e6b42&lastobs=&from=&to=&filetype=csv&label=include&layout=seriescolumn&type=package)
+
+There are 30 unique measurements.
+
+In this analysis, only M1 and M2 will be analyzed.
+
+```{r}
+#| echo: false
+#| label: tbl-desc
+#| tbl-cap: "Description of H.6 Data"
+
+df1 %>% 
+  select(5:6) %>% 
+  gt()
+```
+
+## M1 Seasonally Adjusted
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| label: fig-M1
+#| fig-cap: "Seasonally Adjusted M1 : Currency in Circulation and Demand (Checking) Deposits"
+library(tidyverse)
+library(anytime)
+
+df <- read_csv("data/FRB_H6.csv", skip = 5)
+
+df$time <- anydate(df$`Time Period`)
+
+df %>% 
+  ggplot(aes(time, M1.M)) +
+  geom_line() +
+  labs(title = "Line Chart")
+
+df %>% 
+  ggplot(aes(time, M1.M)) +
+  geom_smooth() +
+  labs(title = "Geom Smooth Chart")
+```
+
+## M2 Seasonally Adjusted
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| #| label: fig-M2
+#| fig-cap: "Seasonally Adjusted M2 : M1 Plus Saving, Time and Money Market Deposits"
+library(tidyverse)
+library(anytime)
+
+df <- read_csv("data/FRB_H6.csv", skip = 5)
+
+df$time <- anydate(df$`Time Period`)
+
+df %>% 
+  ggplot(aes(time, M2.M)) +
+  geom_line() +
+  labs(title = "Line Chart")
+
+df %>% 
+  ggplot(aes(time, M2.M)) +
+  geom_smooth() +
+  labs(title = "Geom Smooth Chart")
+
+```
+
+### geom_smooth method
+
+Smoothing Method: The function uses a smoothing method to fit a line to the data. By default, it uses loess (Locally Weighted Scatterplot Smoothing) for small datasets and gam (Generalized Additive Models) for larger datasets. You can also specify other methods like linear regression (method = "lm")
+
+## M1 Supply and Inflation
+
+The M1 money supply can have a significant impact on inflation, which is the rate at which the general level of prices for goods and services rises, eroding purchasing power. The relationship between M1 (a narrow measure of the money supply) and inflation is rooted in basic economic principles, particularly the quantity theory of money and demand-pull inflation.
+
+### 1. **Quantity Theory of Money**
+   - **Basic Concept**: The quantity theory of money is summarized by the equation \( MV = PQ \), where:
+     - \( M \) is the money supply (M1 in this case).
+     - \( V \) is the velocity of money, or how frequently money changes hands.
+     - \( P \) is the price level.
+     - \( Q \) is the real output or quantity of goods and services produced in the economy.
+   - **Implication**: If the money supply (M) increases rapidly while the velocity of money (V) and the output (Q) remain relatively stable, the price level (P) tends to increase, leading to inflation.
+
+### 2. **Demand-Pull Inflation**
+   - **Mechanism**: An increase in M1 typically means more cash and liquid assets are available for spending. When people and businesses have more money in their checking accounts, they are likely to spend more. This increase in aggregate demand (the total demand for goods and services in an economy) can lead to higher prices if the supply of goods and services doesn’t keep up.
+   - **Scenario**: For instance, if the economy is at or near full capacity, a sudden increase in M1 can push demand beyond what the economy can produce. As a result, businesses may raise prices, leading to demand-pull inflation.
+
+### 3. **Central Bank Policies and Inflation**
+   - **Monetary Policy**: Central banks, like the Federal Reserve in the U.S., monitor the M1 money supply closely because changes in M1 can signal potential inflationary pressures. If the central bank observes that M1 is growing too quickly, it might take actions to curb inflation, such as raising interest rates or reducing the money supply through open market operations.
+   - **Controlled Increase**: On the other hand, a moderate and controlled increase in M1 can support economic growth without causing excessive inflation, especially if the increase in money supply matches the growth in the economy’s productive capacity.
+
+### 4. **Current Economic Context**
+   - **Low Velocity of Money**: In certain periods, even a significant increase in M1 might not lead to inflation if the velocity of money is low—meaning that people or businesses are holding onto cash rather than spending it. This was observed during the COVID-19 pandemic when central banks increased the money supply, but inflation remained low for a period due to reduced spending and uncertainty.
+
+### Summary
+An increase in the M1 money supply can lead to inflation, particularly when it outpaces the economy’s ability to produce goods and services. This relationship is central to how central banks manage monetary policy, balancing the need for economic growth with the risk of inflation. However, the impact of M1 on inflation can be moderated by factors like the velocity of money and economic capacity.

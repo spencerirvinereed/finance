@@ -1,0 +1,9 @@
+# Preface {.unnumbered}
+
+This is a book on Finance, made with `R` and `Quarto`.
+
+To learn more about Quarto books visit <https://quarto.org/docs/books>.
+
+Provo, Utah
+
+Anno Domini 2024

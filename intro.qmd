@@ -1,0 +1,5 @@
+# Introduction
+
+Each chapter in the book cover a financial topic.
+
+The output will be a book on financial understanding.

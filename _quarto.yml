@@ -1,0 +1,26 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Financial Journey"
+  author: "DK"
+  date: "9/2/2024"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - M1 supply.qmd
+    - hof.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
