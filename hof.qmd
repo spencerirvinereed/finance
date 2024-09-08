@@ -2,8 +2,87 @@
 
 ## Buffett's First Million
 
-https://www.youtube.com/watch?v=M5i_YYAXsAM
+How Warren Buffett earned his first million before age 35
+[First Million](https://www.youtube.com/watch?v=M5i_YYAXsAM)
 
 ## Value Investment
 
-https://youtu.be/HKB2H7IM6NY?si=9rMWgwjGOoVhd_mM
+Value Investing Explained in 5 Levels of Difficulty
+
+[Value Investing](https://youtu.be/HKB2H7IM6NY?si=9rMWgwjGOoVhd_mM)
+
+## Superstars of Value Investing
+
+According to Chat GPT
+
+Value investing is a long-term investment strategy where investors seek out stocks that appear to be undervalued by the market but have strong fundamentals. Several legendary investors have made a lasting impact using this approach, often referred to as "superstars of value investing." Here are some of the most notable figures:
+
+### 1. **Benjamin Graham**
+   - **Known as**: The Father of Value Investing
+   - **Key Contributions**: 
+     - Benjamin Graham is the founder of the value investing philosophy and the author of two foundational books, *"The Intelligent Investor"* and *"Security Analysis"*.
+     - He developed the idea of investing in stocks that trade below their intrinsic value, providing a "margin of safety" to reduce risk.
+     - He emphasized the importance of analyzing financial statements, looking for undervalued stocks with strong fundamentals.
+   - **Famous Student**: Warren Buffett was a student of Graham at Columbia University and applied Graham's principles to great success.
+
+### 2. **Warren Buffett**
+   - **Known as**: The Oracle of Omaha
+   - **Key Contributions**:
+     - Warren Buffett, the CEO of Berkshire Hathaway, is perhaps the most famous value investor in the world. He expanded on Graham’s principles by focusing not just on undervalued companies but also on the quality of the business.
+     - Buffett emphasizes investing in companies with durable competitive advantages (a "moat") and strong management.
+     - His long-term approach is centered around holding great companies, sometimes forever, and benefiting from their compounding growth.
+     - **Famous Quote**: "It's far better to buy a wonderful company at a fair price than a fair company at a wonderful price."
+   
+### 3. **Charlie Munger**
+   - **Known as**: Warren Buffett’s Right-Hand Man
+   - **Key Contributions**:
+     - Charlie Munger is the vice chairman of Berkshire Hathaway and Buffett’s close partner.
+     - He is known for his multidisciplinary approach to investing, blending Graham's value investing framework with insights from various fields like psychology, economics, and philosophy.
+     - Munger encourages investors to develop a “latticework of mental models” to understand complex problems and make better investment decisions.
+     - **Famous Quote**: "All intelligent investing is value investing—acquiring more than you are paying for."
+
+### 4. **Seth Klarman**
+   - **Known as**: The Next Warren Buffett
+   - **Key Contributions**:
+     - Seth Klarman, founder of Baupost Group, is another highly respected value investor who adheres to Benjamin Graham’s principles, particularly the margin of safety.
+     - His book *"Margin of Safety: Risk-Averse Value Investing Strategies for the Thoughtful Investor"* is a rare and influential text on value investing.
+     - Klarman is known for his contrarian approach, often investing in out-of-favor sectors or distressed securities.
+     - **Famous Quote**: "The stock market is the story of cycles and of the human behavior that is responsible for overreactions in both directions."
+
+### 5. **Joel Greenblatt**
+   - **Known for**: The Magic Formula
+   - **Key Contributions**:
+     - Joel Greenblatt is a renowned value investor and the author of *"The Little Book That Still Beats the Market"*, where he introduced the "Magic Formula" for investing.
+     - His formula ranks stocks based on two factors: high earnings yield and high return on capital, focusing on companies that generate strong profits relative to their market price.
+     - Greenblatt is also a successful hedge fund manager and a professor at Columbia Business School.
+     - **Famous Quote**: "The best way to measure your investing success is not by whether you’re beating the market but by whether you’ve put in place a financial plan and a behavioral discipline that are likely to get you where you want to go."
+
+### 6. **John Templeton**
+   - **Known as**: Pioneer of Global Investing
+   - **Key Contributions**:
+     - Sir John Templeton was a pioneer in international investing and founded the Templeton Growth Fund.
+     - He applied value investing principles across global markets, looking for undervalued stocks in regions others overlooked.
+     - Templeton is known for his contrarian views, often buying at moments of extreme pessimism and seeking investments in undervalued, neglected markets.
+     - **Famous Quote**: "The four most dangerous words in investing are: 'This time it’s different.'"
+
+### 7. **Peter Lynch**
+   - **Known for**: Growth-at-a-Reasonable-Price (GARP) Approach
+   - **Key Contributions**:
+     - Peter Lynch, the legendary manager of the Fidelity Magellan Fund, is often associated with value investing, though he blended it with growth investing principles.
+     - His approach, known as **Growth-at-a-Reasonable-Price (GARP)**, focused on finding companies that were both growing earnings and trading at a reasonable valuation.
+     - He was famous for his ability to identify and invest in companies that could deliver strong long-term growth.
+     - **Famous Quote**: "Know what you own, and know why you own it."
+
+### 8. **Irving Kahn**
+   - **Known as**: Value Investing Pioneer
+   - **Key Contributions**:
+     - Irving Kahn was one of Benjamin Graham's earliest students and a lifelong practitioner of value investing principles.
+     - He co-founded Kahn Brothers Group and focused on undervalued stocks, placing emphasis on research and understanding the companies he invested in.
+     - Kahn was known for his conservative, patient approach, often holding stocks for many years to realize their value.
+     - **Famous Quote**: "Don’t get in over your head when times are good, and don’t get scared when times are bad."
+
+---
+
+### Summary
+
+The superstars of value investing share several key principles: a focus on intrinsic value, disciplined analysis of financial fundamentals, and a long-term mindset. They emphasize buying companies when they are trading below their true worth, often going against popular sentiment in the market, and relying on patience to realize gains. These investors have left an enduring legacy and continue to influence the field of investing today.
